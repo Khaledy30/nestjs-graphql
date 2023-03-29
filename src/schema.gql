@@ -1,0 +1,57 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateProductInput {
+  description: String!
+  name: String!
+  price: Float!
+}
+
+input CreateWholesalerInput {
+  departurePoint: String!
+  description: String!
+  name: String!
+}
+
+type Mutation {
+  createProduct(createProductInput: CreateProductInput!): Product!
+  createWholesaler(createWholesalerInput: CreateWholesalerInput!): Wholesaler!
+  removeProduct(id: Int!): Product!
+  removeWholesaler(id: Int!): Wholesaler!
+  updateProduct(updateProductInput: UpdateProductInput!): Product!
+  updateWholesaler(updateWholesalerInput: UpdateWholesalerInput!): Wholesaler!
+}
+
+type Product {
+  description: String!
+  id: Int!
+  name: String!
+  price: Float!
+}
+
+type Query {
+  product(id: Int!): Product!
+  products: [Product!]!
+  wholesaler(id: Int!): Wholesaler!
+}
+
+input UpdateProductInput {
+  description: String!
+  id: Int!
+  name: String!
+  price: Float!
+}
+
+input UpdateWholesalerInput {
+  departurePoint: String!
+  description: String!
+  id: Int!
+  name: String!
+}
+
+type Wholesaler {
+  departurePoint: String!
+  id: Int!
+  name: String!
+}
