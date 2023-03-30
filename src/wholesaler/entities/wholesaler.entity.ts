@@ -5,9 +5,12 @@ export class Wholesaler {
   @Field(() => Int)
   id: number;
 
-  @Field()
+  @Field(() => String)
   name: string;
 
-  @Field()
+  @Field(() => String)
   departurePoint: string;
+
+  @Field(() => Date)
+  createdAt: Date;
 }

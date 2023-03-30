@@ -5,7 +5,7 @@
 input CreateProductInput {
   description: String!
   name: String!
-  price: Float!
+  price: Int!
 }
 
 input CreateWholesalerInput {
@@ -13,6 +13,11 @@ input CreateWholesalerInput {
   description: String!
   name: String!
 }
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
 
 type Mutation {
   createProduct(createProductInput: CreateProductInput!): Product!
@@ -24,23 +29,26 @@ type Mutation {
 }
 
 type Product {
+  createdAt: DateTime!
   description: String!
   id: Int!
   name: String!
-  price: Float!
+  price: Int!
+  updatedAt: DateTime!
 }
 
 type Query {
   product(id: Int!): Product!
   products: [Product!]!
   wholesaler(id: Int!): Wholesaler!
+  wholesalers: [Wholesaler!]!
 }
 
 input UpdateProductInput {
   description: String!
   id: Int!
   name: String!
-  price: Float!
+  price: Int!
 }
 
 input UpdateWholesalerInput {
@@ -51,6 +59,7 @@ input UpdateWholesalerInput {
 }
 
 type Wholesaler {
+  createdAt: DateTime!
   departurePoint: String!
   id: Int!
   name: String!

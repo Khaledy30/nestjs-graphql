@@ -24,7 +24,12 @@ export class ProductsService {
     return this.prisma.product.findUnique({where: {id}})
   }
 
-  update(id: number, updateProductInput: UpdateProductInput) {
+  async update(id: number, updateProductInput: UpdateProductInput) {
+    const productAlreadyExists = await this.prisma.product.findUnique({where: {id}})
+
+    if (!productAlreadyExists) {
+        throw new Error("Product not exist")
+    }
     return this.prisma.product.update({where: {id}, data: {
         name: updateProductInput.name,
         description: updateProductInput.description,

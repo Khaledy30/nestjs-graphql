@@ -13,7 +13,7 @@ export class WholesalerResolver {
     return this.wholesalerService.create(createWholesalerInput);
   }
 
-  @Query(() => [Wholesaler], { name: 'wholesaler' })
+  @Query(() => [Wholesaler], { name: 'wholesalers' })
   findAll() {
     return this.wholesalerService.findAll();
   }
