@@ -37,7 +37,12 @@ export class ProductsService {
       }})
   }
 
-  remove(id: number) {
+  async remove(id: number) {
+    const productAlreadyExists = await this.prisma.product.findUnique({where: {id}})
+
+    if (!productAlreadyExists) {
+        throw new Error("Product not exist!")
+    }
     return this.prisma.product.delete({where: {id}})
   }
 }

@@ -5,6 +5,7 @@ import { join } from 'path';
 import { ProductsModule } from './products/products.module';
 import { WholesalerModule } from './wholesaler/wholesaler.module';
 import { PrismaService } from './prisma/prisma.service';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { PrismaService } from './prisma/prisma.service';
       }),
       ProductsModule,
       WholesalerModule,
+      UsersModule,
   ],
   providers: [PrismaService],
 })

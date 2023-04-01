@@ -61,6 +61,7 @@ input UpdateWholesalerInput {
 type Wholesaler {
   createdAt: DateTime!
   departurePoint: String!
+  description: String!
   id: Int!
   name: String!
 }

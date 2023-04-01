@@ -6,12 +6,12 @@ export class UpdateWholesalerInput extends PartialType(CreateWholesalerInput) {
   @Field(() => Int)
   id: number;
 
-  @Field()
+  @Field(() => String)
   name: string;
 
-  @Field()
+  @Field(() => String)
   description: string;
 
-  @Field()
+  @Field(() => String)
   departurePoint: string;
 }
