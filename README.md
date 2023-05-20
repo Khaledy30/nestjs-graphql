@@ -82,7 +82,7 @@ This command will apply changes to the database schema based on the defined mode
 To run tests for the monolith, use the following command:
 
 ```
-npm run test
+npm run test:monolith
 ```
 
 This command will execute the test suite for the project.
