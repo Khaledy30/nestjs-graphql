@@ -1,13 +1,16 @@
 # SERVERMONO
 
 ## NestJS, GraphQL, Prisma and PlanetScale Project
-This is a quick guide to set up and initialize a NestJS project with GraphQL, using Prisma as the ORM and PlanetScale as the database. It also includes instructions for developing new modules within the monolith.
+
+Welcome to the NestJS project with GraphQL, Prisma, and PlanetScale! This guide will help you get started and provide an overview of the project's structure and processes.
 
 ## Prerequisites
+
 Make sure you have Node.js and npm installed on your machine.
 
 
-## Configuration
+## Project Setup 
+
 1. Clone this repository to your local machine.
 2. Navigate to the project's root directory.
 
@@ -35,6 +38,16 @@ Run the following command to install project dependencies:
 npm install
 ```
 
+# Project Structure
+
+The project follows a monolithic architecture, where both the monolith and the gateway need to be running for the application to function properly. Here's an overview of the project structure:
+
+- apps/
+  - monolith/: Contains the code for the monolith server.
+  - gateway/: Contains the code for the GraphQL gateway server.
+  - libs/: Contains shared code and modules used by the monolith and the gateway.
+  - prisma/: Contains Prisma configuration files and database schema.
+
 ## Initialization Scripts
 
 The following scripts are available in the project:
@@ -61,13 +74,20 @@ This command will start the NestJS server with the GraphQL gateway in developmen
 
 ## Open Prisma Studio
 
+This will open a graphical interface where you can view and interact with your database.
+
 To open Prisma Studio, use the following command:
 
 ```
 npx prisma studio
 ```
 
-This will open a graphical interface where you can view and interact with your database.
+Prisma Studio allows you to:
+
+- Browse and explore your database tables.
+- View table data and relationships.
+- Add new records to the tables manually.
+
 
 ## Update the Model with PlanetScale
 
@@ -96,6 +116,13 @@ When developing new modules within the monolith, follow the guidelines below:
 2. Organize the code of the module according to the best practices and patterns adopted in the project.
 3. Register the module in the app.module.ts file of the monolith to ensure proper loading.
 4. Be sure to write adequate tests for the new module to ensure its quality and functionality.
+
+# Understanding GraphQL Queries and Mutations
+
+GraphQL is used as the query language for the API. Here's a brief explanation of queries and mutations:
+
+- Queries: Used to fetch data from the server. They specify the fields and relationships to retrieve.
+- Mutations: Used to modify data on the server. They allow you to create, update, or delete records.
 
 
 ## Conclusion
