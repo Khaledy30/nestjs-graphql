@@ -1,7 +1,7 @@
 # SERVERMONO
 
-## README - NestJS and GraphQL Project
-This is a quick guide to set up and initialize a NestJS project with GraphQL. It also includes instructions for developing new modules in the system.
+## README - NestJS, GraphQL, Prisma and PlanetScale Project
+This is a quick guide to set up and initialize a NestJS project with GraphQL, using Prisma as the ORM and PlanetScale as the database. It also includes instructions for developing new modules within the monolith.
 
 ## Prerequisites
 Make sure you have Node.js and npm installed on your machine.
@@ -87,14 +87,15 @@ npm run test
 
 This command will execute the test suite for the project.
 
-## Instructions for Development of New Modules
+## Instructions for Development of New Modules within the Monolith
+When developing new modules within the monolith, follow the guidelines below:
 
-When developing new modules for the system, follow the guidelines below:
-1. Create a new directory within the src directory for the module.
+1. Create a new directory within the src directory of the monolith.
 2. Organize the code of the module according to the best practices and patterns adopted in the project.
-3. Register the module in the app.module.ts file to ensure proper loading.
+3. Register the module in the app.module.ts file of the monolith to ensure proper loading.
 4. Be sure to write adequate tests for the new module to ensure its quality and functionality.
+
 
 ## Conclusion
 
-This is a basic guide to set up and initialize a NestJS project with GraphQL and also to develop new modules for the system. Make sure to refer to the official documentation of NestJS, GraphQL, Prisma, and PlanetScale, and follow the guidelines and standards established by the development team.
+This is a basic guide to set up and initialize a NestJS project with GraphQL, using Prisma as the ORM and PlanetScale as the database. Make sure to refer to the official documentation of NestJS, GraphQL, Prisma, and PlanetScale, and follow the guidelines and standards established by the development team.
