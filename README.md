@@ -47,7 +47,7 @@ To start the monolith, use the following command:
 npm run dev:monolith
 ```
 
-This command will start the NestJS server with GraphQL in development mode.
+This command will start the NestJS server with GraphQL in development mode. The monolith will run on http://localhost:3001/graphql.
 
 ## Start the Gateway
 
@@ -57,7 +57,7 @@ To start the gateway, use the following command:
 npm run dev:gateway
 ```
 
-This command will start the NestJS server with the GraphQL gateway in development mode.
+This command will start the NestJS server with the GraphQL gateway in development mode. The gateway will run on http://localhost:3000/graphql.
 
 ## Open Prisma Studio
 
