@@ -1,73 +1,100 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# SERVERMONO
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## README - NestJS and GraphQL Project
+This is a quick guide to set up and initialize a NestJS project with GraphQL. It also includes instructions for developing new modules in the system.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Prerequisites
+Make sure you have Node.js and npm installed on your machine.
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Configuration
+1. Clone this repository to your local machine.
+2. Navigate to the project's root directory.
 
-## Installation
+## Db diagram
 
-```bash
-$ npm install
+Generate the schema by running npx prisma generate and then execute the following command:
+arduino
+
+```
+npm run prisma:docs
 ```
 
-## Running the app
+You can access the database diagram at https://pantore.github.io/servermono/
+￼
 
-```bash
-# development
-$ npm run start
+<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-# watch mode
-$ npm run start:dev
+## Installing Dependencies
 
-# production mode
-$ npm run start:prod
+Run the following command to install project dependencies:
+
+```
+npm install
 ```
 
-## Test
+## Initialization Scripts
 
-```bash
-# unit tests
-$ npm run test
+The following scripts are available in the project:
 
-# e2e tests
-$ npm run test:e2e
+## Start the Monolith
 
-# test coverage
-$ npm run test:cov
+To start the monolith, use the following command:
+
+```
+npm run dev:monolith
 ```
 
-## Support
+This command will start the NestJS server with GraphQL in development mode.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Start the Gateway
 
-## Stay in touch
+To start the gateway, use the following command:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
+npm run dev:gateway
+```
 
-## License
+This command will start the NestJS server with the GraphQL gateway in development mode.
 
-Nest is [MIT licensed](LICENSE).
+## Open Prisma Studio
+
+To open Prisma Studio, use the following command:
+
+```
+npx prisma studio
+```
+
+This will open a graphical interface where you can view and interact with your database.
+
+## Update the Model with PlanetScale
+
+To update the model with PlanetScale using Prisma, use the following command:
+
+```
+npx prisma db push
+```
+
+This command will apply changes to the database schema based on the defined model.
+
+## Run Tests
+
+To run tests for the monolith, use the following command:
+
+```
+npm run test
+```
+
+This command will execute the test suite for the project.
+
+## Instructions for Development of New Modules
+
+When developing new modules for the system, follow the guidelines below:
+1. Create a new directory within the src directory for the module.
+2. Organize the code of the module according to the best practices and patterns adopted in the project.
+3. Register the module in the app.module.ts file to ensure proper loading.
+4. Be sure to write adequate tests for the new module to ensure its quality and functionality.
+
+## Conclusion
+
+This is a basic guide to set up and initialize a NestJS project with GraphQL and also to develop new modules for the system. Make sure to refer to the official documentation of NestJS, GraphQL, Prisma, and PlanetScale, and follow the guidelines and standards established by the development team.
