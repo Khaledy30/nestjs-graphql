@@ -1,6 +1,6 @@
 # SERVERMONO
 
-## README - NestJS, GraphQL, Prisma and PlanetScale Project
+## NestJS, GraphQL, Prisma and PlanetScale Project
 This is a quick guide to set up and initialize a NestJS project with GraphQL, using Prisma as the ORM and PlanetScale as the database. It also includes instructions for developing new modules within the monolith.
 
 ## Prerequisites
