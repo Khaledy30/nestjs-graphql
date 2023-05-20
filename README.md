@@ -38,7 +38,7 @@ Run the following command to install project dependencies:
 npm install
 ```
 
-# Project Structure
+## Project Structure
 
 The project follows a monolithic architecture, where both the monolith and the gateway need to be running for the application to function properly. Here's an overview of the project structure:
 
@@ -117,7 +117,7 @@ When developing new modules within the monolith, follow the guidelines below:
 3. Register the module in the app.module.ts file of the monolith to ensure proper loading.
 4. Be sure to write adequate tests for the new module to ensure its quality and functionality.
 
-# Understanding GraphQL Queries and Mutations
+## Understanding GraphQL Queries and Mutations
 
 GraphQL is used as the query language for the API. Here's a brief explanation of queries and mutations:
 
